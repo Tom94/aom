@@ -406,10 +406,10 @@ else()
 
   # Do not allow implicit vector type conversions on Clang builds (this is
   # already the default on GCC builds).
-  if(CMAKE_C_COMPILER_ID MATCHES "Clang")
-    # Clang 8.0.1 (in Cygwin) doesn't support -flax-vector-conversions=none.
-    add_compiler_flag_if_supported("-flax-vector-conversions=none")
-  endif()
+  # if(CMAKE_C_COMPILER_ID MATCHES "Clang")
+  #   # Clang 8.0.1 (in Cygwin) doesn't support -flax-vector-conversions=none.
+  #   add_compiler_flag_if_supported("-flax-vector-conversions=none")
+  # endif()
 endif()
 
 # Prior to r23, or with ANDROID_USE_LEGACY_TOOLCHAIN_FILE set,
